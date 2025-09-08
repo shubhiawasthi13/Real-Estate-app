@@ -1,12 +1,19 @@
 import { useState } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useAuth } from "../services/context/AuthContext"; // make sure you have AuthContext
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../services/context/AuthContext"; // adjust path
 
 export default function Navbar() {
   const [active, setActive] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const { user, logout } = useAuth(); // get user & logout
+  const { user, logout } = useAuth();
+  const navigate = useNavigate(); // ✅ use here
+
+  const handleLogout = async () => {
+    await logout();       // sign out from Firebase
+    navigate("/login");   // redirect to login page
+    setMenuOpen(false);   // close mobile menu if open
+  };
 
   const links = [
     { name: "Home", path: "/" },
@@ -53,7 +60,7 @@ export default function Navbar() {
         {/* Desktop Auth Button */}
         {user ? (
           <button
-            onClick={logout}
+            onClick={handleLogout} // ✅ navigate after logout
             className="hidden md:flex items-center gap-2 bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition"
           >
             Logout - {user.displayName}
@@ -102,16 +109,9 @@ export default function Navbar() {
               </li>
             ))}
 
-            <Link to="/propertyList" className="cursor-pointer">
-              PropertyList
-            </Link>
-
             {user ? (
               <button
-                onClick={() => {
-                  logout();
-                  setMenuOpen(false);
-                }}
+                onClick={handleLogout} // ✅ navigate after logout
                 className="flex items-center gap-2 bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition w-fit"
               >
                 Logout {user.displayName}
