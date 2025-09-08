@@ -2,12 +2,17 @@
 A responsive property listing web application built with React (Vite), integrated with Firebase Authentication, and deployed on Netlify.
 https://propbot-real-estate-app.netlify.app
 
-## 📸 Screenshots
-Home page- [https://res.cloudinary.com/djg40ufiy/image/upload/v1757329795/home_cyz9hl.png], 
-Buy Page-[https://res.cloudinary.com/djg40ufiy/image/upload/v1757329854/buy_t7frss.png], 
-LoginPage- [https://res.cloudinary.com/djg40ufiy/image/upload/v1757329880/login_fdppaq.png],
-SignupPage- [https://res.cloudinary.com/djg40ufiy/image/upload/v1757329901/signup_qqellp.png], 
-ProductlistPage- [https://res.cloudinary.com/djg40ufiy/image/upload/v1757329918/productlist_uxgxpa.png]
+## 📸 App Screenshots
+Home page- 
+[https://res.cloudinary.com/djg40ufiy/image/upload/v1757329795/home_cyz9hl.png], 
+Buy Page-
+[https://res.cloudinary.com/djg40ufiy/image/upload/v1757329854/buy_t7frss.png], 
+LoginPage- 
+[https://res.cloudinary.com/djg40ufiy/image/upload/v1757329880/login_fdppaq.png],
+SignupPage-
+[https://res.cloudinary.com/djg40ufiy/image/upload/v1757329901/signup_qqellp.png], 
+ProductlistPage- 
+[https://res.cloudinary.com/djg40ufiy/image/upload/v1757329918/productlist_uxgxpa.png]
 
 🚀 **Features**
 🔑 User Authentication (Firebase Auth)
