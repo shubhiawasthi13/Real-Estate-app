@@ -3,7 +3,7 @@ A responsive property listing web application built with React (Vite), integrate
 https://propbot-real-estate-app.netlify.app
 
 ## 📸 App Screenshots
-Home page- 
+Home page-
 [https://res.cloudinary.com/djg40ufiy/image/upload/v1757329795/home_cyz9hl.png], 
 Buy Page-
 [https://res.cloudinary.com/djg40ufiy/image/upload/v1757329854/buy_t7frss.png], 
