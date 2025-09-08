@@ -15,7 +15,6 @@ export default function Navbar() {
     { name: "Sell", path: "/sell" },
     { name: "About Us", path: "/about" },
     { name: "Contact Us", path: "/contact" },
-    { name: "PropertyList", path: "/propertyList" },
   ];
 
   return (
@@ -23,7 +22,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="https://propbot-real-estate-app.netlify.app/logo.png" alt="logo" className="w-6 h-6" />
+          <img
+            src="https://propbot-real-estate-app.netlify.app/logo.png"
+            alt="logo"
+            className="w-6 h-6"
+          />
           <span className="text-xl font-bold text-gray-800">PropBot</span>
         </div>
 
@@ -53,7 +56,7 @@ export default function Navbar() {
             onClick={logout}
             className="hidden md:flex items-center gap-2 bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition"
           >
-             Logout - {user.displayName}
+            Logout - {user.displayName}
           </button>
         ) : (
           <Link
@@ -98,6 +101,10 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+
+            <Link to="/propertyList" className="cursor-pointer">
+              PropertyList
+            </Link>
 
             {user ? (
               <button

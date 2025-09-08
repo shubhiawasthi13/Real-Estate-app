@@ -15,14 +15,14 @@ export default function Footer() {
         </p>
 
         {/* Email Input */}
-        <div className="flex justify-center">
-          <div className="flex w-full max-w-lg rounded-full overflow-hidden bg-gray-200">
+        <div className="flex justify-center w-full px-4">
+          <div className="flex flex-col sm:flex-row w-full max-w-lg rounded-full overflow-hidden bg-gray-200">
             <input
               type="email"
               placeholder="Enter your email"
               className="flex-1 px-5 py-2 text-gray-900 focus:outline-none text-base sm:text-lg"
             />
-            <button className="px-5 sm:px-6 py-2 bg-blue-900 text-white font-medium hover:bg-blue-950 transition flex-shrink-0">
+            <button className="px-5 sm:px-6 py-2 bg-blue-900 text-white font-medium hover:bg-blue-950 transition sm:ml-2 mt-2 sm:mt-0 rounded-full flex-shrink-0">
               Submit
             </button>
           </div>
