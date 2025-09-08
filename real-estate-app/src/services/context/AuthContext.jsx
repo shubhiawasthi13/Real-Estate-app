@@ -1,13 +1,14 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../firebase"; // adjust path if needed
 import { onAuthStateChanged, signOut } from "firebase/auth";
-
+import { useNavigate } from "react-router-dom";
 // Create context
 const AuthContext = createContext();
 
 // Provider component
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+ const navigate = useNavigate();
 
   // Listen to Firebase auth state
   useEffect(() => {
@@ -21,6 +22,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     await signOut(auth);
     setUser(null);
+     navigate("/login")
   };
 
   return (
