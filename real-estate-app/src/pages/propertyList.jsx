@@ -38,16 +38,15 @@ function PropertyList() {
           <div className="animate-spin rounded-full h-12 w-12 border-4 border-blue-500 border-t-transparent"></div>
         </div>
       ) : (
-        <section className="my-12 px-6 md:px-12">
+        <section className="my-12 px-4 sm:px-6 md:px-12 overflow-x-hidden">
           {/* Header */}
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-blue-900">
                 All Properties Available
               </h2>
-              <p className="text-gray-600 mt-1 text-sm md:text-base md:text-lg md:w-[70%]">
-                Browse our top-rated properties, featuring premium listings
-                tailored to your needs.
+              <p className="text-gray-600 mt-1 text-sm md:text-base">
+                Browse our top-rated properties, featuring premium listings tailored to your needs.
               </p>
             </div>
 
@@ -72,7 +71,7 @@ function PropertyList() {
               {filteredProperties.map((property) => (
                 <div
                   key={property.id}
-                  className="w-full h-[400px] bg-white rounded-xl shadow-md overflow-hidden"
+                  className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-full"
                 >
                   <img
                     src={property.image}
@@ -82,18 +81,23 @@ function PropertyList() {
                       e.target.src = "/home.png";
                     }}
                   />
-                  <div className="p-4 flex flex-col gap-2 h-[152px] md:h-[160px] bg-[#EEEEEE]">
-                    <div className="flex items-center text-gray-500 text-sm gap-1">
-                      <img src="https://propbot-real-estate-app.netlify.app/location.png" alt="icon" className="w-5 h-5" />
-                      {property.city}, {property.state}
+                  <div className="p-4 flex flex-col gap-2 bg-[#EEEEEE] flex-1">
+                    <div className="flex items-center text-gray-500 text-sm gap-1 overflow-hidden">
+                      <img
+                        src="https://propbot-real-estate-app.netlify.app/location.png"
+                        alt="icon"
+                        className="w-5 h-5 flex-shrink-0"
+                      />
+                      <span className="truncate">
+                        {property.city}, {property.state}
+                      </span>
                     </div>
 
-                    <p className="text-gray-700 text-sm md:text-base w-[70%] truncate">
-                      Spacious 3BHK apartment in a prime location with modern
-                      amenities.
+                    <p className="text-gray-700 text-sm md:text-base truncate">
+                      Spacious 3BHK apartment in a prime location with modern amenities.
                     </p>
 
-                    <div className="flex justify-between items-center mt-2">
+                    <div className="flex justify-between items-center mt-2 flex-wrap gap-2">
                       <button className="bg-blue-800 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-900">
                         {property.isRental ? "View Rental" : "Buy Now"}
                       </button>
@@ -108,9 +112,7 @@ function PropertyList() {
               ))}
             </div>
           ) : (
-            <p className="text-gray-600 mt-6">
-              No properties found for this location.
-            </p>
+            <p className="text-gray-600 mt-6">No properties found for this location.</p>
           )}
         </section>
       )}

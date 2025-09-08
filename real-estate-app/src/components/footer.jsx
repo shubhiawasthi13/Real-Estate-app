@@ -22,7 +22,7 @@ export default function Footer() {
               placeholder="Enter your email"
               className="flex-1 px-5 py-2 text-gray-900 focus:outline-none text-base sm:text-lg"
             />
-            <button className="px-5 sm:px-6 py-2 m-2 bg-blue-900 text-white font-medium rounded-full hover:bg-blue-950 transition">
+            <button className="px-5 sm:px-6 py-2 bg-blue-900 text-white font-medium hover:bg-blue-950 transition flex-shrink-0">
               Submit
             </button>
           </div>
@@ -36,8 +36,8 @@ export default function Footer() {
           <img
             src="https://propbot-real-estate-app.netlify.app/f_logo.png"
             alt="logo"
-            className="w-6 h-6"        
- />
+            className="w-6 h-6"
+          />
           <span className="font-poppins font-bold text-lg sm:text-xl md:text-[22px]">
             PropBot
           </span>
@@ -59,4 +59,3 @@ export default function Footer() {
     </footer>
   );
 }
-
