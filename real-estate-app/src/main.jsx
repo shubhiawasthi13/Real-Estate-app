@@ -10,6 +10,7 @@ import Register from "./pages/register.jsx";
 import Login from "./pages/login.jsx";
 import { AuthProvider } from "./services/context/AuthContext.jsx";
 import ProtectedRoute from "./services/context/ProtectedRoute.jsx";
+import PropertyList from "./pages/propertyList.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
@@ -28,6 +29,7 @@ createRoot(document.getElementById("root")).render(
                 </ProtectedRoute>
               }
             />
+            <Route path="propertyList" element={<PropertyList />} />
           </Route>
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />

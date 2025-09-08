@@ -1,6 +1,7 @@
 import { Search, ChevronDown, ArrowUpRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import Property from "../components/property";
 export default function Home() {
   const [userType, setUserType] = useState("");
@@ -99,9 +100,9 @@ export default function Home() {
                 placeholder="Search location..."
               />
             </div>
-            <button className="px-5 py-1 bg-white text-blue-800 border border-blue-800 rounded-full hover:bg-blue-50 transition whitespace-nowrap">
+            <Link to ="/propertyList" className="px-5 py-1 bg-white text-blue-800 border border-blue-800 rounded-full hover:bg-blue-50 transition whitespace-nowrap">
               List your Property
-            </button>
+            </Link>
           </div>
         </div>
 
