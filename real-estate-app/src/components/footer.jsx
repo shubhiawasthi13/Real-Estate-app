@@ -34,7 +34,7 @@ export default function Footer() {
         {/* Logo - Left */}
         <div className="flex items-center gap-2 justify-center md:justify-start">
           <img
-            src="/f_logo.png"
+            src="https://propbot-real-estate-app.netlify.app/f_logo.png"
             alt="logo"
             className="w-6 h-6"        
  />

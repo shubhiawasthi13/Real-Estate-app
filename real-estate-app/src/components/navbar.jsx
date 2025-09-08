@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="logo" className="w-6 h-6" />
+          <img src="https://propbot-real-estate-app.netlify.app/logo.png" alt="logo" className="w-6 h-6" />
           <span className="text-xl font-bold text-gray-800">PropBot</span>
         </div>
 

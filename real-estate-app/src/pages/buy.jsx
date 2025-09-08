@@ -40,7 +40,7 @@ function Buy() {
               {" "}
               {/* Only blurred image */}{" "}
               <img
-                src="/hero-blur.png"
+                src="https://propbot-real-estate-app.netlify.app/hero-blur.png"
                 alt="Blur Background"
                 className="absolute inset-0 w-full h-full object-cover blur-md opacity-80"
               />{" "}
@@ -71,7 +71,7 @@ function Buy() {
               {" "}
               <span className="flex items-center gap-2">
                 {" "}
-                <img src="/hero-icon-1.png" /> For Buying{" "}
+                <img src="https://propbot-real-estate-app.netlify.app/hero-icon-1.png" /> For Buying{" "}
               </span>{" "}
               <ChevronDown size={18} />{" "}
             </button>{" "}
@@ -80,7 +80,7 @@ function Buy() {
               {" "}
               <span className="flex items-center gap-2">
                 {" "}
-                <img src="/hero-icon-2.png" /> House{" "}
+                <img src="https://propbot-real-estate-app.netlify.app/hero-icon-2.png" /> House{" "}
               </span>{" "}
               <ChevronDown size={18} />{" "}
             </button>{" "}
@@ -89,7 +89,7 @@ function Buy() {
               {" "}
               <span className="flex items-center gap-2">
                 {" "}
-                <img src="/hero-icon-3.png" /> Indonesia{" "}
+                <img src="https://propbot-real-estate-app.netlify.app/hero-icon-3.png" /> Indonesia{" "}
               </span>{" "}
               <ChevronDown size={18} />{" "}
             </button>{" "}
@@ -143,7 +143,7 @@ function Buy() {
                     <div>
                       <div className="flex items-center gap-2">
                         <img
-                          src="/location.png"
+                          src="https://propbot-real-estate-app.netlify.app/location.png"
                           alt="icon"
                           className="w-5 h-5"
                         />

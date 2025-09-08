@@ -61,7 +61,7 @@ const Login = () => {
 
         {/* Center: Logo */}
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="" className="w-6 h-6 sm:w-7 sm:h-7" />
+          <img src="https://propbot-real-estate-app.netlify.app/logo.png" alt="" className="w-6 h-6 sm:w-7 sm:h-7" />
           <span className="font-bold text-lg sm:text-xl">PropBot</span>
         </div>
 
@@ -160,13 +160,13 @@ const Login = () => {
           {/* Social Login */}
           <div className="flex justify-center gap-12 text-2xl text-gray-600">
             <button aria-label="Login with Apple">
-              <img src="/apple.png" alt="social-logo" />
+              <img src="https://propbot-real-estate-app.netlify.app/apple.png" alt="Apple" />
             </button>
             <button aria-label="Login with Facebook">
-              <img src="/fb.png" alt="social-logo" />
+              <img src="https://propbot-real-estate-app.netlify.app/fb.png" alt="social-logo" />
             </button>
             <button aria-label="Login with Google">
-              <img src="/google.png" alt="social-logo" />
+              <img src="https://propbot-real-estate-app.netlify.app/google.png" alt="social-logo" />
             </button>
           </div>
 
@@ -185,7 +185,7 @@ const Login = () => {
         {/* Right Column Image */}
         <section className="flex-1 max-w-xl rounded-3xl overflow-hidden shadow-lg">
           <img
-            src="/login.png"
+            src="https://propbot-real-estate-app.netlify.app/login.png"
             alt="Modern House"
             className="w-full object-cover rounded-3xl h-96 md:h-full"
             loading="lazy"

@@ -84,7 +84,7 @@ function PropertyList() {
                   />
                   <div className="p-4 flex flex-col gap-2 h-[152px] md:h-[160px] bg-[#EEEEEE]">
                     <div className="flex items-center text-gray-500 text-sm gap-1">
-                      <img src="/location.png" alt="icon" className="w-5 h-5" />
+                      <img src="https://propbot-real-estate-app.netlify.app/location.png" alt="icon" className="w-5 h-5" />
                       {property.city}, {property.state}
                     </div>
 

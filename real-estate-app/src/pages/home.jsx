@@ -8,39 +8,39 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const features = [
     {
-      icon: <img src="/icon-1.png" />,
+      icon: <img src="https://propbot-real-estate-app.netlify.app/icon-1.png" />,
       title: "Buy & Sell Properties",
       desc: "Find verified homes for sale or list your property with ease.",
     },
     {
-      icon: <img src="/icon-2.png" />,
+      icon: <img src="https://propbot-real-estate-app.netlify.app/icon-2.png" />,
       title: "Find Rental Homes",
       desc: "Browse through thousands of rental options suited to your needs.",
     },
     {
-      icon: <img src="/icon-3.png" />,
+      icon: <img src="https://propbot-real-estate-app.netlify.app/icon-3.png" />,
       title: "Smart AI Property Search",
       desc: "Get instant recommendations based on your budget & location.",
     },
     {
-      icon: <img src="/icon-4.png" />,
+      icon: <img src="https://propbot-real-estate-app.netlify.app/icon-4.png" />,
       title: "Safe & Secure Transactions",
       desc: "Verified listings & secure deals to ensure a smooth experience.",
     },
   ];
   const latestfeatures = [
     {
-      icon: <img src="/budget-icon.png" className="w-8 h-8 text-blue-800" />,
+      icon: <img src="https://propbot-real-estate-app.netlify.app/budget-icon.png" className="w-8 h-8 text-blue-800" />,
       title: "Budget Friendly",
       desc: "Lorem ipsum dolor sit amet consectetur. Venenatis sed ac aenean tempus. Lectus quis pretium varius iaculis sed.",
     },
     {
-      icon: <img src="/trust-icon.png" className="w-8 h-8 text-blue-800" />,
+      icon: <img src="https://propbot-real-estate-app.netlify.app/trust-icon.png" className="w-8 h-8 text-blue-800" />,
       title: "Trusted By Thousand",
       desc: "Lorem ipsum dolor sit amet consectetur. Venenatis sed ac aenean tempus. Lectus quis pretium varius iaculis sed.",
     },
     {
-      icon: <img src="/prime-icon.png" className="w-8 h-8 text-blue-800" />,
+      icon: <img src="https://propbot-real-estate-app.netlify.app/prime-icon.png" className="w-8 h-8 text-blue-800" />,
       title: "Prime Location",
       desc: "Lorem ipsum dolor sit amet consectetur. Venenatis sed ac aenean tempus. Lectus quis pretium varius iaculis sed.",
     },
@@ -89,7 +89,7 @@ export default function Home() {
             <div className="relative w-1/2">
               {/* Left icon */}
               <img
-                src="/location.png"
+                src="https://propbot-real-estate-app.netlify.app/location.png"
                 className="w-6 h-6 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
               />
               {/* Right icon */}
@@ -113,7 +113,7 @@ export default function Home() {
             {/* For Rent */}
             <button className="flex-1 flex items-center justify-between px-5 py-2 bg-white shadow-md rounded-xl md:rounded-full border border-gray-400">
               <span className="flex items-center gap-2">
-                <img src="/hero-icon-1.png" />
+                <img src="https://propbot-real-estate-app.netlify.app/hero-icon-1.png" />
                 For Rent
               </span>
               <ChevronDown size={18} />
@@ -122,7 +122,7 @@ export default function Home() {
             {/* House */}
             <button className="flex-1 flex items-center justify-between px-5 py-2 bg-white shadow-md rounded-xl md:rounded-full border border-gray-400">
               <span className="flex items-center gap-2">
-                <img src="/hero-icon-2.png" />
+                <img src="https://propbot-real-estate-app.netlify.app/hero-icon-2.png" />
                 House
               </span>
               <ChevronDown size={18} />
@@ -131,7 +131,7 @@ export default function Home() {
             {/* Indonesia */}
             <button className="flex-1 flex items-center justify-between px-5 py-2 bg-white shadow-md rounded-xl md:rounded-full border border-gray-400">
               <span className="flex items-center gap-2">
-                <img src="/hero-icon-3.png" />
+                <img src="https://propbot-real-estate-app.netlify.app/hero-icon-3.png" />
                 Indonesia
               </span>
               <ChevronDown size={18} />
@@ -199,7 +199,7 @@ export default function Home() {
             {/* Left Big Image (50%) */}
             <div className="relative rounded-xl overflow-hidden h-[500px]">
               <img
-                src="/property-1.png"
+                src="https://propbot-real-estate-app.netlify.app/property-1.png"
                 alt="Kenanga Residence"
                 className="w-full h-full object-cover"
               />
@@ -214,7 +214,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4 h-[500px]">
               {/* One tall image */}
               <img
-                src="/property-2.png"
+                src="https://propbot-real-estate-app.netlify.app/property-2.png"
                 alt="Property"
                 className="rounded-xl object-cover w-full h-full"
               />
@@ -222,12 +222,12 @@ export default function Home() {
               {/* Two stacked small images */}
               <div className="flex flex-col gap-4">
                 <img
-                  src="/property-3.png"
+                  src="https://propbot-real-estate-app.netlify.app/property-3.png"
                   alt="Property"
                   className="rounded-xl object-cover h-1/2 w-full"
                 />
                 <img
-                  src="/property-4.png"
+                  src="https://propbot-real-estate-app.netlify.app/property-4.png"
                   alt="Property"
                   className="rounded-xl object-cover h-1/2 w-full"
                 />
@@ -320,14 +320,14 @@ export default function Home() {
           <div className="relative w-full flex justify-center md:justify-start">
             {/* Back Image */}
             <img
-              src="/l-property-1.png"
+              src="https://propbot-real-estate-app.netlify.app/l-property-1.png"
               alt="Back House"
               className="w-60 sm:w-72 md:w-96 h-64 sm:h-80 md:h-96 rounded-lg shadow-lg object-cover"
             />
 
             {/* Overlapping Front Image */}
             <img
-              src="/l-property-2.png"
+              src="https://propbot-real-estate-app.netlify.app/l-property-2.png"
               alt="Front House"
               className="w-52 sm:w-64 md:w-80 h-52 sm:h-72 md:h-80 rounded-lg shadow-lg absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 object-cover"
             />
