@@ -103,7 +103,7 @@ const Register = () => {
       </nav>
 
       {/* Main */}
-      <main className="flex-1 flex flex-col lg:flex-row max-w-8l mx-auto p-6 gap-6">
+      <main className="flex-1 flex flex-col lg:flex-row max-w-7l mx-auto p-6 gap-6">
         {/* Form Section */}
         <div className="w-full lg:w-1/2 max-w-md mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-[34px] font-poppins font-bold text-center mb-6">
