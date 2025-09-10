@@ -53,7 +53,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-hidden">
       {/* Navbar */}
       <nav className="w-full bg-white shadow-[0px_4px_8px_0px_#0000001F] px-4 sm:px-6 lg:px-12 h-[85px] flex items-center justify-between">
         {/* Left: Back Button */}
@@ -75,7 +75,6 @@ const Register = () => {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          {/* Hide text on mobile */}
           <span className="hidden sm:inline">Back to Homepage</span>
         </Link>
 
@@ -103,9 +102,9 @@ const Register = () => {
       </nav>
 
       {/* Main */}
-      <main className="flex-1 flex flex-col lg:flex-row max-w-7l mx-auto p-6 gap-6">
+      <main className="flex-1 flex flex-col lg:flex-row max-w-7xl mx-auto p-6 gap-6 h-[calc(100vh-85px)]">
         {/* Form Section */}
-        <div className="w-full lg:w-1/2 max-w-md mx-auto">
+        <div className="w-full lg:w-1/2 max-w-md mx-auto flex flex-col justify-center">
           <h1 className="text-2xl sm:text-3xl md:text-[34px] font-poppins font-bold text-center mb-6">
             Create new account
           </h1>
@@ -113,7 +112,7 @@ const Register = () => {
           <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
             {/* Name */}
             <div className="flex flex-col gap-1">
-              <label className="font-semibold font-poppins ">Name</label>
+              <label className="font-semibold font-poppins">Name</label>
               <input
                 type="text"
                 name="name"
@@ -127,7 +126,7 @@ const Register = () => {
 
             {/* Email */}
             <div className="flex flex-col gap-1 relative">
-              <label className="font-semibold font-poppins ">
+              <label className="font-semibold font-poppins">
                 Email Address
               </label>
               <input
@@ -137,12 +136,13 @@ const Register = () => {
                 onChange={handleChange}
                 placeholder="Enter Your Email Id"
                 className="w-full sm:w-[320px] md:w-[453px] border border-blue-700 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
               />
             </div>
 
             {/* Password */}
             <div className="flex flex-col gap-1 relative">
-              <label className="font-semibold font-poppins ">Password</label>
+              <label className="font-semibold font-poppins">Password</label>
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
@@ -163,7 +163,7 @@ const Register = () => {
 
             {/* Confirm Password */}
             <div className="flex flex-col gap-1 relative">
-              <label className="font-semibold font-poppins ">
+              <label className="font-semibold font-poppins">
                 Confirm Password
               </label>
               <input
@@ -207,7 +207,7 @@ const Register = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex justify-center items-center">
           <div className="w-full max-w-md lg:max-w-none h-96 lg:h-full rounded-[34px] overflow-hidden border border-blue-600 border-opacity-50 shadow-lg">
             <img
               src="https://propbot-real-estate-app.netlify.app/login.png"

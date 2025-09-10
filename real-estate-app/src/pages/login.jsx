@@ -33,7 +33,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col overflow-hidden">
       {/* Navbar */}
       <nav className="w-full bg-white shadow-[0px_4px_8px_0px_#0000001F] px-4 sm:px-6 lg:px-12 h-[85px] flex items-center justify-between">
         {/* Left: Back Button */}
@@ -55,7 +55,6 @@ const Login = () => {
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          {/* Hide text on mobile */}
           <span className="hidden sm:inline">Back to Homepage</span>
         </Link>
 
@@ -83,9 +82,9 @@ const Login = () => {
       </nav>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col lg:flex-row max-w-7xl mx-auto p-6 gap-6">
+      <main className="flex-1 flex flex-col lg:flex-row max-w-7xl mx-auto p-6 gap-6 h-[calc(100vh-85px)]">
         {/* Form Section */}
-        <div className="w-full lg:w-1/2 max-w-md mx-auto">
+        <div className="w-full lg:w-1/2 max-w-md mx-auto flex flex-col justify-center">
           <h1 className="text-2xl sm:text-3xl md:text-[34px] font-poppins font-bold text-center mb-6">
             Log In
           </h1>
@@ -198,7 +197,7 @@ const Login = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex justify-center items-center">
           <div className="w-full max-w-md lg:max-w-none h-96 lg:h-full rounded-[34px] overflow-hidden border border-blue-600 border-opacity-50 shadow-lg">
             <img
               src="https://propbot-real-estate-app.netlify.app/login.png"
