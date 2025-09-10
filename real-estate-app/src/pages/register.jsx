@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -56,14 +55,15 @@ const Register = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navbar */}
-      <nav className="flex justify-between items-center px-4 sm:px-6 py-4 border-b border-gray-200">
+      <nav className="w-full bg-white shadow-[0px_4px_8px_0px_#0000001F] px-4 sm:px-6 lg:px-12 h-[85px] flex items-center justify-between">
+        {/* Left: Back Button */}
         <Link
           to="/"
-          className="text-xs sm:text-sm flex items-center gap-2 border border-blue-700 rounded-full px-3 sm:px-4 py-2 text-blue-700 hover:bg-blue-50 transition"
+          className="flex items-center gap-2 sm:gap-4 px-4 py-2 rounded-[24px] border border-gray-300 text-[#555555] font-poppins text-[16px] sm:text-[18px]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4 sm:h-5 sm:w-5"
+            className="h-5 w-5 sm:h-5 sm:w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -75,69 +75,81 @@ const Register = () => {
               d="M15 19l-7-7 7-7"
             />
           </svg>
+          {/* Hide text on mobile */}
           <span className="hidden sm:inline">Back to Homepage</span>
         </Link>
 
-        <div className="flex items-center gap-2">
-          <img src="https://propbot-real-estate-app.netlify.app/logo.png" alt="" className="w-6 h-6 sm:w-7 sm:h-7" />
-          <span className="font-bold text-lg sm:text-xl">PropBot</span>
+        {/* Center: Logo */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <img
+            src="https://propbot-real-estate-app.netlify.app/logo.png"
+            alt="Logo"
+            className="w-8 h-8 sm:w-8 sm:h-8"
+          />
+          <span className="sm:inline font-poppins font-bold text-lg sm:text-2xl">
+            PropBot
+          </span>
         </div>
 
-        <button className="hidden sm:flex bg-blue-900 text-white text-xs sm:text-sm rounded-full px-4 sm:px-6 py-2 hover:bg-blue-800 transition items-center gap-2">
-          About Us
-          <span className="flex items-center justify-center w-4 h-4 rounded-full border border-white">
-            <ArrowRight size={14} className="text-white" />
-          </span>
-        </button>
+        {/* Right: About Us Button */}
+        <div className="hidden sm:flex items-center gap-2">
+          <button className="flex items-center gap-2 px-4 py-2 rounded-[24px] bg-[#1E3A8A] text-white font-poppins text-[18px]">
+            About Us
+            <span className="flex items-center justify-center w-4 h-4 rounded-full border border-white">
+              <ArrowRight size={14} className="text-white" />
+            </span>
+          </button>
+        </div>
       </nav>
 
       {/* Main */}
-      <main className="flex-1 flex flex-col lg:flex-row max-w-7xl mx-auto p-6 gap-6">
+      <main className="flex-1 flex flex-col lg:flex-row max-w-8l mx-auto p-6 gap-6">
         {/* Form Section */}
         <div className="w-full lg:w-1/2 max-w-md mx-auto">
-          <h1 className="text-2xl font-bold mb-6 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-[34px] font-poppins font-bold text-center mb-6">
             Create new account
           </h1>
 
           <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
             {/* Name */}
             <div className="flex flex-col gap-1">
-              <label className="font-semibold">Name</label>
+              <label className="font-semibold font-poppins ">Name</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Enter Your Full Name"
-                className="border border-blue-700 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full sm:w-[320px] md:w-[453px] border border-blue-700 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
 
             {/* Email */}
             <div className="flex flex-col gap-1 relative">
-              <label className="font-semibold">Email Address</label>
+              <label className="font-semibold font-poppins ">
+                Email Address
+              </label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter Your Email Id"
-                className="border border-blue-700 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
+                className="w-full sm:w-[320px] md:w-[453px] border border-blue-700 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             {/* Password */}
             <div className="flex flex-col gap-1 relative">
-              <label className="font-semibold">Password</label>
+              <label className="font-semibold font-poppins ">Password</label>
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Enter Your Password"
-                className="border border-blue-700 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full sm:w-[320px] md:w-[453px] border border-blue-700 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
               <button
@@ -151,7 +163,9 @@ const Register = () => {
 
             {/* Confirm Password */}
             <div className="flex flex-col gap-1 relative">
-              <label className="font-semibold">Confirm Password</label>
+              <label className="font-semibold font-poppins ">
+                Confirm Password
+              </label>
               <input
                 type={showConfirmPassword ? "text" : "password"}
                 name="confirmPassword"
@@ -175,17 +189,17 @@ const Register = () => {
             {/* Button */}
             <button
               type="submit"
-              className="bg-blue-900 text-white rounded-full py-3 mt-4 hover:bg-blue-800 transition"
+              className="bg-[#1E3A8A] text-white w-full sm:w-[300px] md:w-[417px] py-3 px-5 sm:px-6 rounded-[34px] mt-4 shadow-[2px_2px_10px_0_rgba(0,0,0,0.16)] hover:bg-blue-800 transition font-poppins font-medium text-base sm:text-lg md:text-[18px]"
             >
               Create Account
             </button>
           </form>
 
-          <p className="text-center mt-6 text-sm text-gray-600">
+          <p className="text-center mt-6 text-sm text-gray-600 font-poppins">
             Already have an account?{" "}
             <Link
               to="/login"
-              className="text-blue-900 font-semibold hover:underline"
+              className="text-blue-900 font-semibold hover:underline font-poppins"
             >
               Log In
             </Link>
@@ -193,12 +207,12 @@ const Register = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-1/2">
-          <div className="w-full h-96 lg:h-full rounded-xl overflow-hidden border border-blue-600 border-opacity-50">
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-full max-w-md lg:max-w-none h-96 lg:h-full rounded-[34px] overflow-hidden border border-blue-600 border-opacity-50 shadow-lg">
             <img
               src="https://propbot-real-estate-app.netlify.app/login.png"
-              alt="Modern house"
-              className="w-full h-full object-cover"
+              alt="Modern House"
+              className="w-full h-full object-cover rounded-[34px]"
             />
           </div>
         </div>

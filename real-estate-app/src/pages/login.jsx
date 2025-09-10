@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Mail, Eye, ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
@@ -36,15 +35,15 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       {/* Navbar */}
-      <nav className="flex justify-between items-center px-4 sm:px-6 py-4 border-b border-gray-200">
+      <nav className="w-full bg-white shadow-[0px_4px_8px_0px_#0000001F] px-4 sm:px-6 lg:px-12 h-[85px] flex items-center justify-between">
         {/* Left: Back Button */}
         <Link
           to="/"
-          className="text-xs sm:text-sm flex items-center gap-2 border border-blue-700 rounded-full px-3 sm:px-4 py-2 text-blue-700 hover:bg-blue-50 transition"
+          className="flex items-center gap-2 sm:gap-4 px-4 py-2 rounded-[24px] border border-gray-300 text-[#555555] font-poppins text-[16px] sm:text-[18px]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4 sm:h-5 sm:w-5"
+            className="h-5 w-5 sm:h-5 sm:w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -56,141 +55,158 @@ const Login = () => {
               d="M15 19l-7-7 7-7"
             />
           </svg>
+          {/* Hide text on mobile */}
           <span className="hidden sm:inline">Back to Homepage</span>
         </Link>
 
         {/* Center: Logo */}
-        <div className="flex items-center gap-2">
-          <img src="https://propbot-real-estate-app.netlify.app/logo.png" alt="" className="w-6 h-6 sm:w-7 sm:h-7" />
-          <span className="font-bold text-lg sm:text-xl">PropBot</span>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <img
+            src="https://propbot-real-estate-app.netlify.app/logo.png"
+            alt="Logo"
+            className="w-8 h-8 sm:w-8 sm:h-8"
+          />
+          <span className="sm:inline font-poppins font-bold text-lg sm:text-2xl">
+            PropBot
+          </span>
         </div>
 
-        {/* Right: Button (hidden on very small screens) */}
-        <button className="hidden sm:flex bg-blue-900 text-white text-xs sm:text-sm rounded-full px-4 sm:px-6 py-2 hover:bg-blue-800 transition items-center gap-2">
-          About Us
-          <span className="flex items-center justify-center w-4 h-4 rounded-full border border-white">
-            <ArrowRight size={14} className="text-white" />
-          </span>
-        </button>
+        {/* Right: About Us Button */}
+        <div className="hidden sm:flex items-center gap-2">
+          <button className="flex items-center gap-2 px-4 py-2 rounded-[24px] bg-[#1E3A8A] text-white font-poppins text-[18px]">
+            About Us
+            <span className="flex items-center justify-center w-4 h-4 rounded-full border border-white">
+              <ArrowRight size={14} className="text-white" />
+            </span>
+          </button>
+        </div>
       </nav>
 
       {/* Main Content */}
-      <main className="flex flex-1 flex-col md:flex-row items-center justify-center px-4 md:px-12 py-10 max-w-7xl mx-auto w-full gap-8">
-        {/* Left Column Form */}
-        <section className="max-w-md w-full">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
+      <main className="flex-1 flex flex-col lg:flex-row max-w-8xl mx-auto p-6 gap-6">
+        {/* Form Section */}
+        <div className="w-full lg:w-1/2 max-w-md mx-auto">
+          <h1 className="text-2xl sm:text-3xl md:text-[34px] font-poppins font-bold text-center mb-6">
             Log In
-          </h2>
+          </h1>
 
-          {/* Email Input */}
-          <label className="block w-full mb-4">
-            <span className="block font-semibold mb-1 text-gray-900">
-              Email Address
-            </span>
-            <div className="relative">
+          <form className="flex flex-col gap-5" onSubmit={handleLogin}>
+            {/* Email */}
+            <div className="flex flex-col gap-1 relative">
+              <label className="font-semibold font-poppins">
+                Email Address
+              </label>
               <input
                 type="email"
-                placeholder="Enter Your Email Id"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border border-blue-800 rounded-lg px-4 py-3 outline-none focus:ring-1 focus:ring-blue-800 pr-10"
+                placeholder="Enter Your Email Id"
+                className="w-full sm:w-[320px] md:w-[453px] border border-blue-700 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
               />
-              <Mail className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+              <Mail className="absolute right-3 top-9 text-gray-500" />
             </div>
-          </label>
 
-          {/* Password Input */}
-          <label className="block w-full mb-2">
-            <span className="block font-semibold mb-1 text-gray-900">
-              Password
-            </span>
-            <div className="relative">
+            {/* Password */}
+            <div className="flex flex-col gap-1 relative">
+              <label className="font-semibold font-poppins">Password</label>
               <input
                 type={showPassword ? "text" : "password"}
-                placeholder="Enter Your Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full border border-blue-800 rounded-lg px-4 py-3 outline-none focus:ring-1 focus:ring-blue-800 pr-10"
+                placeholder="Enter Your Password"
+                className="w-full sm:w-[320px] md:w-[453px] border border-blue-700 rounded-lg py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
               />
               <button
                 type="button"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 focus:outline-none"
                 onClick={() => setShowPassword(!showPassword)}
-                aria-label={showPassword ? "Hide password" : "Show password"}
+                className="absolute right-3 top-9 text-gray-600"
               >
-                <Eye />
+                {showPassword ? "🙈" : "👁️"}
               </button>
             </div>
-          </label>
 
-          <div className="flex justify-between items-center mb-6">
-            <label className="inline-flex items-center text-sm text-gray-900">
-              <input
-                type="checkbox"
-                className="form-checkbox h-4 w-4 text-blue-800 rounded"
-              />
-              <span className="ml-2">Remember Me</span>
-            </label>
-            <a
-              href="#!"
-              className="text-xs text-red-600 font-medium hover:underline"
+            {/* Remember & Forgot */}
+            <div className="flex justify-between items-center mb-6">
+              <label className="inline-flex items-center text-sm text-gray-900">
+                <input
+                  type="checkbox"
+                  className="form-checkbox h-4 w-4 text-blue-800 rounded"
+                />
+                <span className="ml-2 font-poppins">Remember Me</span>
+              </label>
+              <a
+                href="#!"
+                className="text-xs text-red-600 font-medium hover:underline"
+              >
+                Forgot Password?
+              </a>
+            </div>
+
+            {/* Error Message */}
+            {error && <p className="text-red-500 text-sm">{error}</p>}
+
+            {/* Log In Button */}
+            <button
+              type="submit"
+              className="bg-[#1E3A8A] text-white w-full sm:w-[300px] md:w-[417px] py-3 px-5 sm:px-6 rounded-[34px] mt-4 shadow-[2px_2px_10px_0_rgba(0,0,0,0.16)] hover:bg-blue-800 transition font-poppins font-medium text-base sm:text-lg md:text-[18px]"
             >
-              Forgot Password?
-            </a>
-          </div>
-
-          {/* Error Message */}
-          {error && <p className="text-red-600 text-sm mb-3">{error}</p>}
-
-          {/* Log In Button */}
-          <button
-            onClick={handleLogin}
-            className="w-full bg-blue-900 hover:bg-blue-800 text-white text-lg rounded-full py-3 font-semibold transition"
-          >
-            Log In
-          </button>
-
-          {/* Divider */}
-          <div className="flex items-center my-3 text-gray-400 text-sm">
-            <hr className="flex-grow border border-gray-300" />
-            <span className="mx-3 whitespace-nowrap">OR CONTINUE WITH</span>
-            <hr className="flex-grow border border-gray-300" />
-          </div>
-
-          {/* Social Login */}
-          <div className="flex justify-center gap-12 text-2xl text-gray-600">
-            <button aria-label="Login with Apple">
-              <img src="https://propbot-real-estate-app.netlify.app/apple.png" alt="Apple" />
+              Log In
             </button>
-            <button aria-label="Login with Facebook">
-              <img src="https://propbot-real-estate-app.netlify.app/fb.png" alt="social-logo" />
-            </button>
-            <button aria-label="Login with Google">
-              <img src="https://propbot-real-estate-app.netlify.app/google.png" alt="social-logo" />
-            </button>
+
+            {/* Divider */}
+            <div className="flex items-center my-3 text-gray-400 text-sm">
+              <hr className="flex-grow border border-gray-300" />
+              <span className="mx-3 whitespace-nowrap">OR CONTINUE WITH</span>
+              <hr className="flex-grow border border-gray-300" />
+            </div>
+
+            {/* Social Login */}
+            <div className="flex justify-center gap-12 text-2xl text-gray-600">
+              <button aria-label="Login with Apple">
+                <img
+                  src="https://propbot-real-estate-app.netlify.app/apple.png"
+                  alt="Apple"
+                />
+              </button>
+              <button aria-label="Login with Facebook">
+                <img
+                  src="https://propbot-real-estate-app.netlify.app/fb.png"
+                  alt="Facebook"
+                />
+              </button>
+              <button aria-label="Login with Google">
+                <img
+                  src="https://propbot-real-estate-app.netlify.app/google.png"
+                  alt="Google"
+                />
+              </button>
+            </div>
+
+            {/* Signup Link */}
+            <p className="mt-2 text-center text-sm sm:text-base md:text-base text-gray-700 font-poppins">
+              Doesn’t have an account?{" "}
+              <Link
+                to="/register"
+                className="font-medium sm:font-semibold text-blue-900 hover:underline"
+              >
+                Create One
+              </Link>
+            </p>
+          </form>
+        </div>
+
+        {/* Image Section */}
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-full max-w-md lg:max-w-none h-96 lg:h-full rounded-[34px] overflow-hidden border border-blue-600 border-opacity-50 shadow-lg">
+            <img
+              src="https://propbot-real-estate-app.netlify.app/login.png"
+              alt="Modern House"
+              className="w-full h-full object-cover rounded-[34px]"
+            />
           </div>
-
-          {/* Signup Link */}
-          <p className="mt-10 text-center text-sm text-gray-700">
-            Doesn’t have an account?{" "}
-            <Link
-              to="/register"
-              className="font-semibold text-blue-900 hover:underline"
-            >
-              Create One
-            </Link>
-          </p>
-        </section>
-
-        {/* Right Column Image */}
-        <section className="flex-1 max-w-xl rounded-3xl overflow-hidden shadow-lg">
-          <img
-            src="https://propbot-real-estate-app.netlify.app/login.png"
-            alt="Modern House"
-            className="w-full object-cover rounded-3xl h-96 md:h-full"
-            loading="lazy"
-          />
-        </section>
+        </div>
       </main>
     </div>
   );
