@@ -127,7 +127,7 @@ const Login = () => {
             </div>
 
             {/* Remember & Forgot */}
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-2">
               <label className="inline-flex items-center text-sm text-gray-900">
                 <input
                   type="checkbox"
@@ -149,7 +149,7 @@ const Login = () => {
             {/* Log In Button */}
             <button
               type="submit"
-              className="bg-[#1E3A8A] text-white w-full sm:w-[300px] md:w-[417px] py-3 px-5 sm:px-6 rounded-[34px] mt-4 shadow-[2px_2px_10px_0_rgba(0,0,0,0.16)] hover:bg-blue-800 transition font-poppins font-medium text-base sm:text-lg md:text-[18px]"
+              className="bg-[#1E3A8A] text-white w-full sm:w-[300px] md:w-[417px] py-3 px-5 sm:px-6 rounded-[34px] mt-1 shadow-[2px_2px_10px_0_rgba(0,0,0,0.16)] hover:bg-blue-800 transition font-poppins font-medium text-base sm:text-lg md:text-[18px]"
             >
               Log In
             </button>

@@ -195,7 +195,7 @@ const Register = () => {
             </button>
           </form>
 
-          <p className="text-center mt-6 text-sm text-gray-600 font-poppins">
+          <p className="text-center mt-2 text-sm text-gray-600 font-poppins">
             Already have an account?{" "}
             <Link
               to="/login"
