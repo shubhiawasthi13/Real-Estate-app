@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col overflow-hidden">
       {/* Navbar */}
-      <nav className="w-full bg-white shadow-[0px_4px_8px_0px_#0000001F] px-4 sm:px-6 lg:px-12 h-[85px] flex items-center justify-between">
+      <nav className="w-full bg-white shadow-[0px_4px_8px_0px_#0000001F] px-4 sm:px-6 lg:px-12 h-[75px] flex items-center justify-between">
         {/* Left: Back Button */}
         <Link
           to="/"
@@ -155,7 +155,7 @@ const Login = () => {
             </button>
 
             {/* Divider */}
-            <div className="flex items-center my-3 text-gray-400 text-sm">
+            <div className="flex items-center my-0 text-gray-400 text-sm">
               <hr className="flex-grow border border-gray-300" />
               <span className="mx-3 whitespace-nowrap">OR CONTINUE WITH</span>
               <hr className="flex-grow border border-gray-300" />
@@ -184,7 +184,7 @@ const Login = () => {
             </div>
 
             {/* Signup Link */}
-            <p className="mt-2 text-center text-sm sm:text-base md:text-base text-gray-700 font-poppins">
+            <p className="mt-1 text-center text-sm sm:text-base md:text-base text-gray-700 font-poppins">
               Doesn’t have an account?{" "}
               <Link
                 to="/register"

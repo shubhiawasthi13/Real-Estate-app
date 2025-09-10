@@ -55,7 +55,7 @@ const Register = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       {/* Navbar */}
-      <nav className="w-full bg-white shadow-[0px_4px_8px_0px_#0000001F] px-4 sm:px-6 lg:px-12 h-[85px] flex items-center justify-between">
+      <nav className="w-full bg-white shadow-[0px_4px_8px_0px_#0000001F] px-4 sm:px-6 lg:px-12 h-[75px] flex items-center justify-between">
         {/* Left: Back Button */}
         <Link
           to="/"
