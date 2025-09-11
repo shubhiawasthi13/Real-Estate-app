@@ -200,7 +200,7 @@ const Login = () => {
         <div className="w-full lg:w-1/2 flex justify-center items-center">
           <div className="w-full max-w-md lg:max-w-none h-96 lg:h-full rounded-[34px] overflow-hidden border border-blue-600 border-opacity-50 shadow-lg">
             <img
-              src="https://propbot-real-estate-app.netlify.app/login.png"
+              src="https://res.cloudinary.com/djg40ufiy/image/upload/v1757599445/login_vd2nos.png"
               alt="Modern House"
               className="w-full h-full object-cover rounded-[34px]"
             />
