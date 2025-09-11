@@ -5,9 +5,13 @@ import { Outlet } from "react-router-dom";
 export default function App() {
   return (
 <>
-<Navbar/>
-<Outlet/>
-<Footer/>
+ <div className="overflow-y-hidden min-h-screen flex flex-col">
+      <Navbar />
+      <div className="flex-1">
+        <Outlet />
+      </div>
+      <Footer />
+    </div>
 </>
 
   )
