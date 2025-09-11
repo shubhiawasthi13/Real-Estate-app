@@ -239,9 +239,9 @@ export default function Home() {
               Featured Property
             </h2>
 
-            <button className="flex items-center gap-1 w-full sm:w-[260px] h-[47px] px-5 py-2.5 border-2 border-blue-900 text-blue-800 rounded-[24px] hover:bg-blue-50 transition">
+            <Link to ="/propertyList" className="flex items-center gap-1 w-full sm:w-[260px] h-[47px] px-5 py-2.5 border-2 border-blue-900 text-blue-800 rounded-[24px] hover:bg-blue-50 transition">
               See 268 New Projects <ArrowUpRight size={18} />
-            </button>
+            </Link>
           </div>
 
           {/* Main Layout */}
